@@ -4,6 +4,9 @@
 ## Assignment 1
 A usability evaluation of Digital Nova Scotia's [website](https://www.digitalnovascotia.com).
 
+## Assignment 2
+A Python webcrawler that uses [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/) and [Requests](http://docs.python-requests.org/en/master/) to crawl Red Sky IT Solutions' [website](https://www.redsky.ca/).
+
 ##### As assignments are completed they will be added to this README.
 
 ###### All of the work here is my own.
