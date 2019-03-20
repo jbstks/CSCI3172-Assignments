@@ -1,0 +1,85 @@
+.progress {
+    background-color: #FFFFFF;
+    border-radius: 13px;
+}
+
+.progress,
+.progress-bar {
+    height: 20px;
+}
+
+.progress-bar {
+    background: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 50%);
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: left;
+    padding: 10px;
+    border-radius: 13px;
+}
+
+.fill-window {
+    min-height: 100vh;
+}
+
+.hello {
+    background: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 50%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.intro {
+    font-weight: bold;
+    font-size: 65px;
+}
+
+.dal-logo {
+    height: 63px;
+}
+
+.filled-dot {
+    background: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 50%); 
+}
+
+.empty-dot {
+    height: 25px;
+    width: 25px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {  
+    .card {
+        padding: 20px;
+        padding-bottom: 0;
+    }
+
+    .card-body {
+        padding-right: 0;
+    }
+}
+
+.justify-content-center {
+    justify-content: center !important;
+}
+
+.edu-year,
+.job-year {
+    text-align: right;
+}
+
+.skills {
+    font-size: 1.25rem;
+}
+
+.skills .badge {
+    border-radius: 13px;
+}
+
+h4 {
+    font-weight: bold;
+}

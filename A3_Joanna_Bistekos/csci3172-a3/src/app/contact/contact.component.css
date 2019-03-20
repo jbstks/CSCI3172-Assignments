@@ -1,0 +1,18 @@
+.fill-window {
+    min-height: 100vh;
+    padding-top: 90px;
+}
+
+.btn-gradient {
+    background: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 50%);
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.invalid {
+    width: 100%;
+    margin-top: .25rem;
+    font-size: 80%;
+    color: #dc3545;
+}
