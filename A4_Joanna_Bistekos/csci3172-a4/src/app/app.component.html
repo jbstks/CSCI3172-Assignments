@@ -1,0 +1,67 @@
+<div class="container">
+    <!--<router-outlet></router-outlet>-->
+    <!--<h1 class="display-4">TODO</h1>-->
+
+    <div class="card mt-5">
+        <div class="card-body">
+            <div class="d-flex justify-content-between todo-title">
+                <h3 class="card-title">TODO</h3>
+                <h3 class="card-title">{{todos.length}}</h3>
+            </div>
+
+            <ul class="list-group list-group-flush">
+
+                <li class="list-group-item d-flex" *ngFor="let todo of todos; let i = index;" [ngClass]="">
+                    <!--
+                    <label class="complete-check">
+                        <span class="todo"></span>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    -->
+                    <div class="d-flex align-items-center justify-content-center width-25px"><input type="checkbox" (click)="completeTodo(i)"></div>
+                    <div class="flex-grow w-100 ml-3">
+                        <input #todoInput type="text" class="flex-grow w-100" id="" value="{{todo.todo}}" (keyup.enter)="setTodo(todoInput.value, i);" [ngClass]="{true:'text-muted'}[checkIsCompleted(i)]" [readonly]="checkIsCompleted(i)"> <!--ng-disabled="checkIsCompleted(i)" [disabled]="checkIsCompleted(i)">-->
+                        <small class="text-muted">{{today | date:'yyyy-MM-dd'}}</small>
+                    </div>
+                    <button type="button" class="btn btn-link" aria-label="delete" (click)="deleteTodo(i);">
+                        <i class="fas fa-times"></i><!--<span>&times;</span>-->
+                    </button>
+                </li>
+                <div class="list-group list-group-flush list-border-top">
+                    <div class="list-group list-group-flush collapse" id="collapse" aria-labelledby="completeLabel">
+                        <li class="list-group-item d-flex" *ngFor="let completeTodo of completedTodos; let i = index;" [ngClass]=""> <!--ngIf="todo.isCompleted"-->
+                            <!--
+                            <label class="complete-check">
+                                <span class="todo"></span>
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            -->
+                            <div class="d-flex align-items-center justify-content-center width-25px"><input type="checkbox" (click)="uncompleteTodo(i)" checked=""></div>
+                            <div class="flex-grow w-100 ml-3">
+                                <input #todoInput type="text" class="flex-grow w-100 text-muted" id="" value="{{completeTodo.todo}}" readonly> <!--ng-disabled="checkIsCompleted(i)" [disabled]="checkIsCompleted(i)">-->
+                                <small class="text-muted">{{today | date:'yyyy-MM-dd'}}</small>
+                            </div>
+                            <button type="button" class="btn btn-link" aria-label="delete" (click)="deleteTodo(i);">
+                                <i class="fas fa-times"></i><!--<span>&times;</span>-->
+                            </button>
+                        </li>
+                    </div>
+                    <a class="list-group-item list-group-item-action" id="completeLabel" data-toggle="collapse" data-target="#collapse" aria-expanded="true" aria-controls="collapse" *ngIf="!completedTodosIsEmpty()" (click)="toggleShowHide()">
+                        <span id="showHide">Show</span> Completed
+                    </a>
+                </div>
+                <li class="list-group-item d-flex new-todo">
+                    <button type="button" class="btn btn-link add-todo" aria-label="add" disabled>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <input #newTodo type="text" class="flex-grow ml-3 w-100" id="" placeholder="What's on today's agenda?" (keyup.enter)="addTodo(newTodo.value); newTodo.value=''" autofocus ngModel>
+                </li>
+            </ul>
+        </div>
+    </div>
+              
+          
+</div>
+
