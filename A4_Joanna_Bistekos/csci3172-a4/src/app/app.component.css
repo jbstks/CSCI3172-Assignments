@@ -28,9 +28,8 @@ h3 {
     padding-top: 1.25rem;
 }
 
-.list-group-item {
-    padding-left: 0;
-    padding-right: 0;
+.card {
+    max-height: 100vh;
 }
 
 .btn-link {
@@ -38,6 +37,16 @@ h3 {
 }
 .btn-link:hover {
     color: #000;
+}
+
+/*.list-group {
+    overflow: scroll;
+    max-height: 100vh;
+}*/
+
+.list-group-item {
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .list-group-item-action {
@@ -50,6 +59,16 @@ h3 {
 
 .list-border-top .list-group-item:first-child {
     border-top: 1px solid rgba(0,0,0,.125);
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: radio; /* Chrome, Safari, Opera */
+    -moz-appearance: radio;    /* Firefox */
+    -ms-appearance: radio;     /* not currently supported */
+}
+
+.todoInput {
+    text-decoration: line-through;
 }
 
 /*

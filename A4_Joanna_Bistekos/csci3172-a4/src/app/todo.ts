@@ -8,9 +8,12 @@
 export class Todo {
     todo: string = '';
     isComplete: boolean = false;
-  
-    constructor(todo: string) {
+    date: Date;
+    color: string = '';
+
+    constructor(todo: string, date: Date) {
         this.todo = todo;
+        this.date = date;
     }
 
     isCompleted() {
@@ -32,5 +35,13 @@ export class Todo {
 
     setTodo(todo: string) {
         this.todo = todo;
+    }
+
+    setColor(color: string) {
+        this.color = color;
+    }
+
+    setDate(date: Date) {
+        this.date = date;
     }
 }

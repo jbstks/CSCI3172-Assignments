@@ -1,24 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~normalize.css/normalize.css";
+
 body {
     background-color: #000000;
     color: #FFFFFF;
-}
-
-.nav-item {
-    font-weight: bold;
 }
 
 .bg-dark {
     background-color: #000000 !important;
 }
 
-.logo {
+/*.logo {
     width: 35%;
     margin-top: 40px;
     margin-bottom: 40px;
-}
+}*/
 
-.logo-2 {
+.logo {
     width: 100px;
     margin-right: 20px;
 }
@@ -26,6 +24,11 @@ body {
 .gradient {
     background-color: #8EC5FC;
     background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 50%);
+}
+
+/* Bootstrap CSS changes */
+.nav-item {
+    font-weight: bold;
 }
 
 .card-container {
