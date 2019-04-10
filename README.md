@@ -10,6 +10,9 @@ A Python webcrawler that uses [Beautiful Soup](https://www.crummy.com/software/B
 ## Assignment 3
 A personal (professional) website built on the Angular framework.
 
+## Assignment 4
+A Todo web app built on the Angular framework.
+
 ##### As assignments are completed they will be added to this README.
 
 ###### All of the work here is my own, unless otherwise stated.
