@@ -4,23 +4,30 @@
     
     Assignment 4 for CSCI 3172. This work is my own.
     
-    Referenced two tutorials[1][2] to see how we can use classes in Angular, and a
-    basis to the Todo app. Used the Bootstrap[3] framework and
-    modified it to better suit my website as necessary.
+    Referenced two tutorials[1][2] to see how we can use classes in Angular,
+    and a basis to the Todo app. Used the Bootstrap[3] framework and modified
+    it to better suit my stylistic needs as necessary.
+    
+    This Todo app does:
+	(a) Contain the date it was added (current date).
+	(b) Have colour tagging (circle button next to x button).
+	(c) Allow you to add, update, and delete todos.
+	(d) Allow you to hide/show completed todos.
+	(e) Provides feedback when completing a todo.
 
 +-----------------------------------------------------------------------------+
 | INSTALLATION INSTRUCTIONS                                                   |
 +-----------------------------------------------------------------------------+
 
-    ( 1 )   Navigate to the `csci3172-a4` folder in your terminal of choice.
+    (1)	Navigate to the `csci3172-a4` folder in your terminal of choice.
 
-    ( 2 )   Run `ng serve -o` to load the development server.
-        ( i )  `-o` will open up the website at `http://localhost:4200/` in
-		your default browser.
-        ( ii ) If ( i ) does not work, navigate to `http://localhost:4200/`,
-                in your browser of choice.
+    (2)	Run `ng serve -o` to load the development server.
+       	(a)  `-o` will open up the website at `http://localhost:4200/` in your
+	     default browser.
+       	(b)  If (a) does not work, navigate to `http://localhost:4200/`, in
+	     your browser of choice.
 
-    ( 3 )   ENJOY.
+    (3)	ENJOY.
 
 +-----------------------------------------------------------------------------+
 | ATTRIBUTIONS                                                                |
@@ -34,5 +41,5 @@
     an Angular App. Retrieved from
     https://www.sitepoint.com/understanding-component-architecture-angular/
 
-[3] Otto, M., Thornton, J., & Bootstrap Contributors. (2011). Bootstrap (Version 4.3).
-    Twitter, Inc.
+[3] Otto, M., Thornton, J., & Bootstrap Contributors. (2011). Bootstrap
+    (Version 4.3). Twitter, Inc.

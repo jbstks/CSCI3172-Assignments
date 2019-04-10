@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { Todo } from './todo';
-
 import 'bootstrap';
-import * as $ from 'jquery';
 
 @Component({
   selector: 'app-root',
@@ -28,6 +26,8 @@ export class AppComponent {
       var newTodo = new Todo(todo, this.today);
       this.todos.push(newTodo);
     }
+    /* debug */
+    console.log('Todos:\n');
     console.log(this.todos);
   }
 
@@ -37,6 +37,8 @@ export class AppComponent {
    */
   deleteTodo(i: number) {
     this.todos.splice(i, 1);
+    /* debug */
+    console.log('Todos:\n');
     console.log(this.todos);
   }
 
@@ -46,6 +48,8 @@ export class AppComponent {
    */
   deleteCompletedTodo(i: number) {
     this.completedTodos.splice(i, 1);
+    /* debug */
+    console.log('Completed Todos:\n');
     console.log(this.completedTodos);
   }
 
@@ -58,7 +62,11 @@ export class AppComponent {
     this.todos[i].toggleCompleted();
     this.completedTodos.push(this.todos[i]);
     this.deleteTodo(i);
+    /* debug */
+    console.log('Todos:\n');
     console.log(this.todos);
+    console.log('Completed Todos:\n');
+    console.log(this.completedTodos);
   }
 
   /**
@@ -70,6 +78,10 @@ export class AppComponent {
     this.completedTodos[i].toggleCompleted();
     this.todos.push(this.completedTodos[i]);
     this.deleteCompletedTodo(i);
+    /* debug */
+    console.log('Todos:\n');
+    console.log(this.todos);
+    console.log('Completed Todos:\n');
     console.log(this.completedTodos);
   }
 
@@ -79,7 +91,7 @@ export class AppComponent {
    */
   checkIsCompleted(i: number) {
     if (this.todos.length == 0) return null;
-    return this.todos[i].getIsCompleted();
+    return this.todos[i].isCompleted();
   }
 
   /**
@@ -90,6 +102,8 @@ export class AppComponent {
   setTodo(todo: string, i: number) {
     if (this.todos.length == 0) return null;
     this.todos[i].setTodo(todo);
+    /* debug */
+    console.log('Todos:\n');
     console.log(this.todos);
   }
 
@@ -109,6 +123,8 @@ export class AppComponent {
     this.color++;
     if (this.color >= this.colors.length) this.color = 0;
     this.todos[i].setColor(this.colors[this.color]);
+    /* debug */
+    console.log('This todo\'s color:' + this.todos[i].color);
   }
 
   /**

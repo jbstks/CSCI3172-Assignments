@@ -8,10 +8,10 @@
 
             <ul class="list-group list-group-flush">
                 <!-- TODOs -->
-                <li class="list-group-item d-flex" *ngFor="let todo of todos; let i = index;" [ngClass]="">
+                <li class="list-group-item d-flex" *ngFor="let todo of todos; let i = index;">
                     <div class="d-flex align-items-center justify-content-center width-25px"><input type="checkbox" (click)="completeTodo(i)"></div>
                     <div class="flex-grow w-100 ml-3">
-                        <input #todoInput type="text" class="flex-grow w-100" id="" value="{{todo.todo}}" (focusout)="setTodo(todoInput.value, i);" [ngClass]="{true:'text-muted'}[checkIsCompleted(i)]" [readonly]="checkIsCompleted(i)"> <!--keyup.enter)="setTodo(todoInput.value, i);"-->
+                        <input #todoInput type="text" class="flex-grow w-100" value="{{todo.todo}}" (focusout)="setTodo(todoInput.value, i);" [ngClass]="{true:'text-muted'}[checkIsCompleted(i)]" [readonly]="checkIsCompleted(i)"> <!--keyup.enter)="setTodo(todoInput.value, i);"-->
                             <!--<small class="text-muted">{{today | date:'yyyy-MM-dd'}}</small>-->
                             <small class="text-muted">{{todo.date | date:'longDate'}}</small>
                     </div>
@@ -25,10 +25,10 @@
 
                 <!-- Completed TODOs -->
                 <div class="list-group list-group-flush list-border-top collapse" id="completedTodos">
-                    <li class="list-group-item d-flex" *ngFor="let completeTodo of completedTodos; let i = index;" [ngClass]="">
+                    <li class="list-group-item d-flex" *ngFor="let completeTodo of completedTodos; let i = index;">
                         <div class="d-flex align-items-center justify-content-center width-25px"><input type="checkbox" (click)="uncompleteTodo(i)" checked=""></div>
                         <div class="flex-grow w-100 ml-3">
-                            <input #todoInput type="text" class="flex-grow w-100 text-muted todoInput" id="" value="{{completeTodo.todo}}" readonly>
+                            <input #todoInput type="text" class="flex-grow w-100 text-muted todoInput" value="{{completeTodo.todo}}" readonly>
                             <!--<small class="text-muted">{{today | date:'yyyy-MM-dd'}}</small>-->
                             <small class="text-muted">{{completeTodo.date | date:'longDate'}}</small>
                         </div>
@@ -49,7 +49,7 @@
                     <button type="button" class="btn btn-link add-todo" aria-label="add" disabled>
                         <i class="fas fa-plus"></i>
                     </button>
-                    <input #newTodo type="text" class="flex-grow ml-3 w-100" id="" placeholder="What's on today's agenda?" (keyup.enter)="addTodo(newTodo.value); newTodo.value=''" autofocus ngModel>
+                    <input #newTodo type="text" class="flex-grow ml-3 w-100" placeholder="What's on today's agenda?" (keyup.enter)="addTodo(newTodo.value); newTodo.value=''" autofocus ngModel>
                 </li>
             </ul>
 
@@ -57,4 +57,3 @@
     </div>
     <small style="color: rgba(255,255,255,0.5);">Joanna Bistekos &copy;2019</small>   
 </div>
-
