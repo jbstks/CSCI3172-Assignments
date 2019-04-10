@@ -30,10 +30,10 @@
                         <div class="flex-grow w-100 ml-3">
                             <input #todoInput type="text" class="flex-grow w-100 text-muted todoInput" id="" value="{{completeTodo.todo}}" readonly>
                             <!--<small class="text-muted">{{today | date:'yyyy-MM-dd'}}</small>-->
-                            <small class="text-muted">{{todo.date | date:'fullDate'}}</small>
+                            <small class="text-muted">{{completeTodo.date | date:'longDate'}}</small>
                         </div>
-                        <button type="button" class="btn btn-link">
-                            <i class="fas fa-circle" [ngStyle]="{'color': completeTodo.color}"></i>
+                        <button type="button" class="btn btn-link" [ngStyle]="{'color': completeTodo.color}" disabled>
+                            <i class="fas fa-circle"></i>
                         </button>
                         <button type="button" class="btn btn-link" aria-label="delete" (click)="deleteCompletedTodo(i);">
                             <i class="fas fa-times"></i>
@@ -54,6 +54,7 @@
             </ul>
 
         </div>
-    </div>     
+    </div>
+    <small style="color: rgba(255,255,255,0.5);">Joanna Bistekos &copy;2019</small>   
 </div>
 

@@ -27,6 +27,10 @@ body {
 }
 
 /* Bootstrap CSS changes */
+.navbar {
+    width: 100vw;
+}
+
 .nav-item {
     font-weight: bold;
 }
